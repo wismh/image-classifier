@@ -1,8 +1,8 @@
-# Cats vs Dogs
+# Image Classifier
 
-An interactive image classifier written in C++23 on top of the [Wind engine](https://github.com/wismh/wind-engine). A small convolutional neural network learns to tell two kinds of pictures apart, cats from dogs by default, and every part of the process is visible: the photos it was trained on, the epochs as they finish, what each filter of the network looks for, and where on a photo the network found its evidence.
+An interactive two-class image classifier written in C++23 on top of the [Wind engine](https://github.com/wismh/wind-engine). A small convolutional neural network learns to tell two kinds of pictures apart, and every part of the process is visible: the photos it was trained on, the epochs as they finish, what each filter of the network looks for, and where on a photo the network found its evidence.
 
-The program is also a learning tool. You can turn any two folders of photos into a dataset, train networks of different sizes on it, continue training a saved network, and read a built-in reference that explains the ideas behind each step. The two classes are not fixed to cats and dogs: their names come from the folders the dataset was made from, so the same program tells men from women or anything else that two folders can describe.
+The program is also a learning tool. You can turn any two folders of photos into a dataset, train networks of different sizes on it, continue training a saved network, and read a built-in reference that explains the ideas behind each step. The two classes are whatever the folders describe: their names come from the subfolders the dataset was made from, so the same program tells cats from dogs, men from women, or any other pair. The screenshots below were made with a cats and dogs dataset.
 
 ![Recognize tab](docs/screenshots/recognize.png)
 
@@ -37,7 +37,7 @@ The program is also a learning tool. You can turn any two folders of photos into
 
 Every photo is cropped to a square and shrunk to 64x64 pixels with three color channels. The network is built from three blocks, each a 3x3 convolution, a ReLU and a 2x2 max pooling (64x64, then 32x32, then 16x16, down to 8x8), followed by a hidden dense layer with ReLU and a dense layer of two scores that become the two class probabilities. Three sizes are offered, from 4-8-16-32 to 16-32-64-128 (filters in the three blocks, then hidden neurons).
 
-Training is mini-batch gradient descent with Adam (batch of 32, learning rate 0.001) and cross-entropy loss. The dataset is split once into a training part and a validation part (20 percent), and the classes are weighted so that a class with fewer photos counts as much as the other. The numbers shown are the balanced accuracy, the mean of the two classes' accuracies, so a network that answers "dog" to everything does not look good just because there are more dogs. The network of the epoch with the lowest validation loss is the one that is saved.
+Training is mini-batch gradient descent with Adam (batch of 32, learning rate 0.001) and cross-entropy loss. The dataset is split once into a training part and a validation part (20 percent), and the classes are weighted so that a class with fewer photos counts as much as the other. The numbers shown are the balanced accuracy, the mean of the two classes' accuracies, so a network that always answers with the larger class does not look good just because that class has more photos. The network of the epoch with the lowest validation loss is the one that is saved.
 
 The seed of the split is stored in the network file, so a network trained further is checked on the same photos it was checked on before. The convolution and dense layers run on a blocked matrix multiplication with an AVX2 kernel and a portable fallback, spread over the engine's worker threads. Training runs in short slices every frame, so the window stays responsive and a run can be stopped at any time.
 
