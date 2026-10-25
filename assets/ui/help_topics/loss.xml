@@ -1,0 +1,23 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.loss.kicker}"/>
+    <Label class="h-title" text="{tr help.loss.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.loss.p1}"/>
+    <Stack class="h-figure" direction="vertical">
+        <Component class="h-diagram dg-220" paint="{binding diagram1}"/>
+        <Label class="h-caption" text="{tr help.loss.fig2}"/>
+    </Stack>
+    <Label class="h-p" text="{tr help.loss.p3}"/>
+    <Label class="h-head" text="{tr help.h.formulas}"/>
+    <Stack class="h-formula" direction="vertical">
+        <Math class="h-math" display="true" formula="L = -\log p_{\text{true}}"/>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.loss.q7_0}"/>
+            <Label class="h-a" text="{tr help.loss.a7_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.loss.try}" command="{binding tryIt}"/>
+</Stack>

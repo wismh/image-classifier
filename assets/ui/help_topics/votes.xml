@@ -1,0 +1,19 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.votes.kicker}"/>
+    <Label class="h-title" text="{tr help.votes.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.votes.p1}"/>
+    <Label class="h-head" text="{tr help.h.formulas}"/>
+    <Stack class="h-formula" direction="vertical">
+        <Math class="h-math" display="true" formula="\text{vote}_f = \sum_{\text{places}} a_f \cdot \frac{\partial (s_{2} - s_{1})}{\partial a_f}"/>
+    </Stack>
+    <Label class="h-p" text="{tr help.votes.p4}"/>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.votes.q6_0}"/>
+            <Label class="h-a" text="{tr help.votes.a6_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.votes.try}" command="{binding tryIt}"/>
+</Stack>

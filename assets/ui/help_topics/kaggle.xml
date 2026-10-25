@@ -1,0 +1,28 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.kaggle.kicker}"/>
+    <Label class="h-title" text="{tr help.kaggle.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.kaggle.p1}"/>
+    <Label class="h-head" text="{tr help.h.where}"/>
+    <Label class="h-p" text="{tr help.kaggle.p3}"/>
+    <Label class="h-p" text="{tr help.kaggle.p4}"/>
+    <Label class="h-p" text="{tr help.kaggle.p5}"/>
+    <Label class="h-p" text="{tr help.kaggle.p6}"/>
+    <Label class="h-p" text="{tr help.kaggle.p7}"/>
+    <Label class="h-p" text="{tr help.kaggle.p8}"/>
+    <Stack class="h-note" direction="vertical">
+        <Label class="h-note-text" text="{tr help.kaggle.note9}"/>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.kaggle.q11_0}"/>
+            <Label class="h-a" text="{tr help.kaggle.a11_0}"/>
+        </Stack>
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.kaggle.q11_1}"/>
+            <Label class="h-a" text="{tr help.kaggle.a11_1}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.kaggle.try}" command="{binding tryIt}"/>
+</Stack>

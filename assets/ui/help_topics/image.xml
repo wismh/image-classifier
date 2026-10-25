@@ -1,0 +1,17 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.image.kicker}"/>
+    <Label class="h-title" text="{tr help.image.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.image.p1}"/>
+    <Label class="h-p" text="{tr help.image.p2}"/>
+    <Label class="h-head" text="{tr help.h.where}"/>
+    <Label class="h-p" text="{tr help.image.p4}"/>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.image.q6_0}"/>
+            <Label class="h-a" text="{tr help.image.a6_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.image.try}" command="{binding tryIt}"/>
+</Stack>

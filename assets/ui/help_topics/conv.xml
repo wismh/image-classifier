@@ -1,0 +1,50 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.conv.kicker}"/>
+    <Label class="h-title" text="{tr help.conv.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.conv.p1}"/>
+    <Stack class="h-figure" direction="vertical">
+        <Component class="h-diagram dg-240" paint="{binding diagram1}"/>
+        <Label class="h-caption" text="{tr help.conv.fig2}"/>
+    </Stack>
+    <Label class="h-p" text="{tr help.conv.p3}"/>
+    <Label class="h-head" text="{tr help.h.formulas}"/>
+    <Stack class="h-formula" direction="vertical">
+        <Math class="h-math" display="true" formula="y_{i,j} = b + \sum_{c} \sum_{u=0}^{2} \sum_{v=0}^{2} w_{c,u,v} \; x_{c,\,i+u-1,\,j+v-1}"/>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.legend}"/>
+    <Stack class="h-legend" direction="vertical">
+        <Stack class="h-legend-row" direction="horizontal">
+            <Stack class="h-sym" direction="vertical">
+                <Math class="h-sym-math" formula="y_{i,j}"/>
+            </Stack>
+            <Label class="h-legend-text" text="{tr help.conv.legend7_0}"/>
+        </Stack>
+        <Stack class="h-legend-row" direction="horizontal">
+            <Stack class="h-sym" direction="vertical">
+                <Math class="h-sym-math" formula="w"/>
+            </Stack>
+            <Label class="h-legend-text" text="{tr help.conv.legend7_1}"/>
+        </Stack>
+        <Stack class="h-legend-row" direction="horizontal">
+            <Stack class="h-sym" direction="vertical">
+                <Math class="h-sym-math" formula="b"/>
+            </Stack>
+            <Label class="h-legend-text" text="{tr help.conv.legend7_2}"/>
+        </Stack>
+        <Stack class="h-legend-row" direction="horizontal">
+            <Stack class="h-sym" direction="vertical">
+                <Math class="h-sym-math" formula="x_c"/>
+            </Stack>
+            <Label class="h-legend-text" text="{tr help.conv.legend7_3}"/>
+        </Stack>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.conv.q9_0}"/>
+            <Label class="h-a" text="{tr help.conv.a9_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.conv.try}" command="{binding tryIt}"/>
+</Stack>

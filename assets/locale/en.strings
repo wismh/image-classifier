@@ -1,0 +1,1282 @@
+locale = "en"
+
+[[string]]
+id = "class.first"
+text = "First class"
+
+[[string]]
+id = "class.second"
+text = "Second class"
+
+[[string]]
+id = "dialog.none"
+text = "(nothing chosen)"
+
+[[string]]
+id = "dialog.output_default"
+text = "(next to the photos folder)"
+
+[[string]]
+id = "ds.counts"
+text = "{first}: {first_count},  {second}: {second_count}"
+
+[[string]]
+id = "ds.no_sample"
+text = "No sample selected"
+
+[[string]]
+id = "ds.page"
+text = "Samples {first}-{last} of {total}"
+
+[[string]]
+id = "ds.sample"
+text = "Sample {n}: {class}"
+
+[[string]]
+id = "ds.title"
+text = "{name} ({count} samples)"
+
+[[string]]
+id = "ds.title_none"
+text = "No dataset yet"
+
+[[string]]
+id = "fig.best"
+text = "best epoch"
+
+[[string]]
+id = "fig.epochs"
+text = "Epoch"
+
+[[string]]
+id = "fig.evidence"
+text = "Evidence for the class"
+
+[[string]]
+id = "fig.filter"
+text = "Filter 3x3"
+
+[[string]]
+id = "fig.loss"
+text = "Loss"
+
+[[string]]
+id = "fig.map"
+text = "Feature map"
+
+[[string]]
+id = "fig.patch"
+text = "A patch of the picture"
+
+[[string]]
+id = "fig.photo"
+text = "Photo"
+
+[[string]]
+id = "fig.pool_in"
+text = "Before"
+
+[[string]]
+id = "fig.pool_out"
+text = "After"
+
+[[string]]
+id = "fig.prob_correct"
+text = "Probability of the right class"
+
+[[string]]
+id = "fig.strong"
+text = "strong"
+
+[[string]]
+id = "fig.train"
+text = "training"
+
+[[string]]
+id = "fig.validation"
+text = "validation"
+
+[[string]]
+id = "fig.weak"
+text = "none"
+
+[[string]]
+id = "filter.all"
+text = "All files"
+
+[[string]]
+id = "filter.datasets"
+text = "Normalized datasets"
+
+[[string]]
+id = "filter.photos"
+text = "Photos"
+
+[[string]]
+id = "filters.connection"
+text = "The output layer takes it as a vote for {class} ({value})"
+
+[[string]]
+id = "filters.detail"
+text = "Bias {bias}, strength of weights {strength}%, mean answer {answer}"
+
+[[string]]
+id = "filters.detail_output"
+text = "Bias {bias}; for this picture the network gives it {chance}%"
+
+[[string]]
+id = "filters.layer"
+text = "Layer {n}/{count}: {filters} filters, {side}x{side}"
+
+[[string]]
+id = "filters.layer_hidden"
+text = "Layer {n}/{count}: hidden, {units} neurons"
+
+[[string]]
+id = "filters.layer_output"
+text = "Layer {n}/{count}: output, {units} scores"
+
+[[string]]
+id = "filters.no_model"
+text = "Load a network on the Recognize tab first"
+
+[[string]]
+id = "filters.note_no_picture"
+text = "Open a picture on the Recognize tab to see how the filters answer to it"
+
+[[string]]
+id = "filters.progress"
+text = "Dreams ready: {done} of {total}"
+
+[[string]]
+id = "filters.selected"
+text = "Filter {n} of {count}"
+
+[[string]]
+id = "filters.selected_neuron"
+text = "Neuron {n} of {count}"
+
+[[string]]
+id = "filters.selected_output"
+text = "Output: {class}"
+
+[[string]]
+id = "filters.vote"
+text = "For this picture it pushes toward {class} by {value}"
+
+[[string]]
+id = "filters.vote_none"
+text = "No picture yet, so no vote"
+
+[[string]]
+id = "help.augment.a6_0"
+text = "The network is trained on harder, changed photos, so it looks worse on them. What counts is the validation accuracy, which usually ends higher."
+
+[[string]]
+id = "help.augment.kicker"
+text = "Data"
+
+[[string]]
+id = "help.augment.p1"
+text = "A network with enough weights can memorize its training photos instead of learning what the class looks like. Augmentation makes this harder: every time a photo is used in training, it is changed a little at random, mirrored, shifted by a few pixels, made lighter or darker, or given more or less contrast. The subject is the same, but the numbers are not, so the network has to look at what stays the same."
+
+[[string]]
+id = "help.augment.p2"
+text = "It is applied only to training photos. The validation photos are never changed, so their numbers stay honest."
+
+[[string]]
+id = "help.augment.p4"
+text = "The Augmentation checkbox on the Train tab. Leave it on unless you want to see overfitting happen: then turn it off and watch the training and validation numbers drift apart."
+
+[[string]]
+id = "help.augment.q6_0"
+text = "Why is the training accuracy lower with it on?"
+
+[[string]]
+id = "help.augment.title"
+text = "Augmentation"
+
+[[string]]
+id = "help.augment.try"
+text = "Open the Train tab"
+
+[[string]]
+id = "help.conv.a9_0"
+text = "Small filters need few weights, and stacking them makes the network see larger areas. At the border the picture is padded with a ring of zeros, so a map keeps the size of its input."
+
+[[string]]
+id = "help.conv.fig2"
+text = "A 3x3 filter over a patch gives one number of the feature map."
+
+[[string]]
+id = "help.conv.kicker"
+text = "Layers of the network"
+
+[[string]]
+id = "help.conv.legend7_0"
+text = "The feature map at row i, column j."
+
+[[string]]
+id = "help.conv.legend7_1"
+text = "The weights of the filter; they are what training changes."
+
+[[string]]
+id = "help.conv.legend7_2"
+text = "The bias of the filter, one number."
+
+[[string]]
+id = "help.conv.legend7_3"
+text = "The input map number c (a color, or a map of the block before)."
+
+[[string]]
+id = "help.conv.p1"
+text = "A filter is a tiny grid of weights, 3 by 3 here. It is laid over a patch of the picture, each weight is multiplied by the pixel under it, and the nine products are added up (plus a bias). That is one number. Then the filter moves one pixel to the side and does it again, until the whole picture is covered. The numbers form a new picture, a feature map: bright where the patch looks like the filter wants."
+
+[[string]]
+id = "help.conv.p3"
+text = "The first block has 3 colors to read, so its filters see colors and edges. Later blocks read the feature maps of the block before, so their filters combine simple things into bigger ones: edges into corners, corners into fur or an eye. The same filter is used everywhere in the picture, so the network finds an ear wherever the ear is."
+
+[[string]]
+id = "help.conv.q9_0"
+text = "Why 3 by 3, and what about the edges?"
+
+[[string]]
+id = "help.conv.title"
+text = "Convolution: a sliding filter"
+
+[[string]]
+id = "help.conv.try"
+text = "Open the Filters tab"
+
+[[string]]
+id = "help.datasets.a6_0"
+text = "A few thousand of each animal gives a decent result with a small network. Fewer photos work too but the network then relies more on chance details."
+
+[[string]]
+id = "help.datasets.kicker"
+text = "Data"
+
+[[string]]
+id = "help.datasets.note4"
+text = "Look through the grid before training. A dataset with photos of one class filed under the other teaches the network to be wrong, and no setting can make up for that; fix the folders and normalize again."
+
+[[string]]
+id = "help.datasets.p1"
+text = "A dataset is the photos together with the right answers. The program does not read your original photos while training; it works from normalized files (.cvds) holding the cropped, shrunk pictures and the label of each, which of the two classes it belongs to. This makes loading fast and the data the same everywhere."
+
+[[string]]
+id = "help.datasets.p3"
+text = "Step 1 takes a folder with two subfolders, one for each class, and writes one .cvds file; photos that cannot be read are skipped and counted. Step 2 adds the file to the list of datasets of the program. A dataset can be deleted from the list."
+
+[[string]]
+id = "help.datasets.q6_0"
+text = "How many photos do I need?"
+
+[[string]]
+id = "help.datasets.title"
+text = "Datasets and normalization"
+
+[[string]]
+id = "help.datasets.try"
+text = "Open the Datasets tab"
+
+[[string]]
+id = "help.dense.a8_0"
+text = "Every neuron is connected to every number of the maps, so the count is neurons times inputs. Most of the network's weights live in this one layer, which is also where overfitting tends to start."
+
+[[string]]
+id = "help.dense.kicker"
+text = "Layers of the network"
+
+[[string]]
+id = "help.dense.legend6_0"
+text = "The flattened maps of the last block."
+
+[[string]]
+id = "help.dense.legend6_1"
+text = "The answer of hidden neuron j."
+
+[[string]]
+id = "help.dense.legend6_2"
+text = "The score of the first class (k = 0) or the second (k = 1)."
+
+[[string]]
+id = "help.dense.p1"
+text = "After the third block the maps are flattened into one long list of numbers. A hidden layer of neurons reads all of them: each neuron has one weight for every number, adds them up, and applies ReLU. It combines what the filters found across the whole picture, such as a face shape plus fur texture."
+
+[[string]]
+id = "help.dense.p2"
+text = "The last layer has two neurons, one for each class. Their numbers are the scores. The bigger score is the network's answer; the next topics explain how the scores become percentages."
+
+[[string]]
+id = "help.dense.q8_0"
+text = "Why does a dense layer have so many weights?"
+
+[[string]]
+id = "help.dense.title"
+text = "Dense layers and the verdict"
+
+[[string]]
+id = "help.dense.try"
+text = "Open the Filters tab"
+
+[[string]]
+id = "help.epochs.a5_0"
+text = "Start with 10 to 20 and watch the validation loss in the list. While it falls, go on. When it stops falling or rises while the training loss keeps falling, more epochs will not help."
+
+[[string]]
+id = "help.epochs.kicker"
+text = "Training"
+
+[[string]]
+id = "help.epochs.note3"
+text = "Continue training takes a saved network and trains it further on the same split, so the validation photos stay unseen and the new numbers can be compared with the old ones."
+
+[[string]]
+id = "help.epochs.p1"
+text = "The network does not look at all photos at once. The training photos are shuffled and cut into batches of 32; after each batch the weights get one step. When every training photo has been seen once, that is an epoch. After each epoch the network is checked on the validation photos, which it never learns from."
+
+[[string]]
+id = "help.epochs.p2"
+text = "A network usually improves for a while and then starts to memorize. So the program keeps the weights of the epoch with the lowest validation loss, not simply the last one, and saves those. The Train tab marks that epoch. Type a name in the field of the Train tab before you start to call the new network what you like; left empty, a name is made up from the size of the network, the epochs and the time."
+
+[[string]]
+id = "help.epochs.q5_0"
+text = "How many epochs should I run?"
+
+[[string]]
+id = "help.epochs.title"
+text = "Epochs, batches and the best epoch"
+
+[[string]]
+id = "help.epochs.try"
+text = "Open the Train tab"
+
+[[string]]
+id = "help.filters.a6_0"
+text = "A deep filter is a mix of many earlier ones and often has no name in human words. Some filters also hardly matter for the answer. Reading them is part science, part guesswork."
+
+[[string]]
+id = "help.filters.kicker"
+text = "Looking inside"
+
+[[string]]
+id = "help.filters.p1"
+text = "Every part of the network can be looked at in three ways. Answers: what the filter produced for the photo you are looking at, as a map, bright where the filter fired. Weights: what it looks for; red weights add and blue weights subtract. Dream: a picture invented to make the filter fire as strongly as possible."
+
+[[string]]
+id = "help.filters.p2"
+text = "A dream starts from noise and is changed step by step in the direction that raises the filter's answer. The first layer's dreams are simple colors and stripes; deeper filters give textures, fur, loops. Dreams of the hidden neurons and of the output are the hardest to read; they are noisy textures because they mix many things."
+
+[[string]]
+id = "help.filters.p4"
+text = "Arrows switch the layer: three convolutional ones, the hidden neurons and the output. Click a cell to see it large. The bars under a cell show how strongly it pushes toward the first or the second class and how strong its weights are. Dreams are made in the background, so a layer fills up after a few seconds."
+
+[[string]]
+id = "help.filters.q6_0"
+text = "Why are many deeper filters unreadable?"
+
+[[string]]
+id = "help.filters.title"
+text = "Filters: answers, weights, dreams"
+
+[[string]]
+id = "help.filters.try"
+text = "Open the Filters tab"
+
+[[string]]
+id = "help.gradcam.a9_0"
+text = "It has only 16 by 16 places for the 64 by 64 photo and is stretched smoothly over it. It shows the region, not the outline."
+
+[[string]]
+id = "help.gradcam.fig2"
+text = "Red marks the places that speak for the animal; the rest of the photo is darker."
+
+[[string]]
+id = "help.gradcam.kicker"
+text = "Looking inside"
+
+[[string]]
+id = "help.gradcam.legend7_0"
+text = "Map k of the last convolutional block, 16 by 16."
+
+[[string]]
+id = "help.gradcam.legend7_1"
+text = "The lead of one animal: its score minus the other animal's."
+
+[[string]]
+id = "help.gradcam.legend7_2"
+text = "How much that animal's lead grows with map k, on average."
+
+[[string]]
+id = "help.gradcam.p1"
+text = "The percentage says what the network thinks but not why. A heat map shows where in the photo it found its evidence. This method is called Grad-CAM. The maps of the last convolutional block are the last place that still knows where things are in the picture, so they are weighed by how much each map matters for one animal's lead over the other (its score minus the other's), and added up."
+
+[[string]]
+id = "help.gradcam.p3"
+text = "The program draws two maps, one for each class; a place argues for one of them, so the class the photo does not speak for stays faint. If the network is right for the right reasons, the red lies on the subject itself, such as the head or body of an animal. If the red sits on a sofa, a leash or the grass, the network may have learned the surroundings rather than the subject."
+
+[[string]]
+id = "help.gradcam.q9_0"
+text = "Why is the map blurry?"
+
+[[string]]
+id = "help.gradcam.title"
+text = "Heat maps: where it looked"
+
+[[string]]
+id = "help.gradcam.try"
+text = "Open the Recognize tab"
+
+[[string]]
+id = "help.gradient.a8_0"
+text = "It lowers the learning rate along a smooth curve during the run, down to a hundredth. The last epochs then make small corrections and the numbers jump less. It is optional: a run without it can do well too."
+
+[[string]]
+id = "help.gradient.kicker"
+text = "Training"
+
+[[string]]
+id = "help.gradient.legend6_0"
+text = "One weight of the network."
+
+[[string]]
+id = "help.gradient.legend6_1"
+text = "The learning rate, about 0.001 here."
+
+[[string]]
+id = "help.gradient.legend6_2"
+text = "The gradient of the loss with respect to the weight."
+
+[[string]]
+id = "help.gradient.p1"
+text = "The loss depends on every weight of the network. For each weight there is a gradient: how much the loss would go up if this weight went up a little. Training moves every weight a small step against its gradient, so the loss goes down. The gradients of all layers are found by backpropagation, which runs the network backwards and passes the blame from the answer to the weights that caused it."
+
+[[string]]
+id = "help.gradient.p2"
+text = "The plain step is the learning rate times the gradient. The program uses Adam, which also remembers the recent direction of each weight and its typical step size, and so moves quickly where the way is clear and carefully where the gradients jump around."
+
+[[string]]
+id = "help.gradient.q8_0"
+text = "What does the learning rate decay checkbox do?"
+
+[[string]]
+id = "help.gradient.title"
+text = "Gradient descent and Adam"
+
+[[string]]
+id = "help.gradient.try"
+text = "Open the Train tab"
+
+[[string]]
+id = "help.h.faq"
+text = "Questions"
+
+[[string]]
+id = "help.h.formulas"
+text = "Formulas"
+
+[[string]]
+id = "help.h.idea"
+text = "The idea"
+
+[[string]]
+id = "help.h.legend"
+text = "What the symbols mean"
+
+[[string]]
+id = "help.h.where"
+text = "In the program"
+
+[[string]]
+id = "help.ideal.a6_0"
+text = "Nothing makes the search stay close to a natural photo, so it finds whatever pushes the score the most. That is also why the pictures change when the network is trained again."
+
+[[string]]
+id = "help.ideal.kicker"
+text = "Looking inside"
+
+[[string]]
+id = "help.ideal.p1"
+text = "The ideal picture of a class is the picture that this network is most sure belongs to it. It is found like a filter's dream: start from noise and change the picture, step by step, so that the score of the class minus the score of the other class grows. The result is what the network looks for, which is not the same as what a real photo of the class looks like."
+
+[[string]]
+id = "help.ideal.p2"
+text = "Expect fur-like textures, eye-like spots and ear-like corners, repeated in odd places. A network trained longer, on more photos, gives more recognizable pictures."
+
+[[string]]
+id = "help.ideal.p4"
+text = "On the Recognize tab, under the photo. They appear a few seconds after a network is loaded."
+
+[[string]]
+id = "help.ideal.q6_0"
+text = "Why do the pictures look like noise?"
+
+[[string]]
+id = "help.ideal.title"
+text = "The ideal pictures"
+
+[[string]]
+id = "help.ideal.try"
+text = "Open the Recognize tab"
+
+[[string]]
+id = "help.image.a6_0"
+text = "A photo of 12 million pixels would make the network enormous and training very slow. 64 by 64 is enough to tell the animals apart most of the time, and it makes everything fast."
+
+[[string]]
+id = "help.image.kicker"
+text = "Basics"
+
+[[string]]
+id = "help.image.p1"
+text = "For the network a picture is a block of numbers: 64 rows and 64 columns of pixels, and each pixel has three numbers, the amount of red, green and blue from 0 to 255. That is 64 x 64 x 3 = 12288 numbers for one photo."
+
+[[string]]
+id = "help.image.p2"
+text = "Real photos come in all sizes, so the program first cuts the largest square out of the middle of a photo and shrinks it to 64 by 64. This is called normalization. All the photos of a dataset then look the same to the network, and one file holds them all."
+
+[[string]]
+id = "help.image.p4"
+text = "Datasets tab, step 1: choose a folder with two subfolders, one for each class (for example cats and dogs, or male and female), and the program writes a .cvds file; the subfolder names become the names of the classes everywhere in the program. Step 2: add that file as a dataset. In the grid you can look at every picture."
+
+[[string]]
+id = "help.image.q6_0"
+text = "Why not keep photos in full size?"
+
+[[string]]
+id = "help.image.title"
+text = "A photo is numbers"
+
+[[string]]
+id = "help.image.try"
+text = "Open the Datasets tab"
+
+[[string]]
+id = "help.intro.a7_0"
+text = "It only knows what the photos taught it. With small pictures and a small network, a photo that looks like the other class it has seen, such as a cat on a sofa among dogs on sofas, can fool it. More and more varied photos, and a larger network, help."
+
+[[string]]
+id = "help.intro.kicker"
+text = "Start here"
+
+[[string]]
+id = "help.intro.note5"
+text = "Everything runs on your computer. Photos are shrunk to 64 by 64 pixels, so a network trains in minutes, but it also sees much less than you do."
+
+[[string]]
+id = "help.intro.p1"
+text = "The program teaches a small neural network to tell one kind of photo from another, for example a cat from a dog or a man from a woman. You choose the two kinds by choosing the photos. Nobody writes rules such as \"pointed ears mean a cat\": the network is shown thousands of photos with the right answers and adjusts its own numbers until it guesses well."
+
+[[string]]
+id = "help.intro.p2"
+text = "The network here is a convolutional one (CNN). It looks at the picture through many small filters, first finds simple things such as edges and spots of color, then combines them into textures and shapes, and at the end gives two numbers: how much it believes in the first class and in the second."
+
+[[string]]
+id = "help.intro.p4"
+text = "Four steps, one tab for each. Datasets: turn folders of photos into a dataset. Train: teach a network on it. Recognize: show the network a photo and see its answer and where it looked. Filters: open the network and see what each of its parts has learned."
+
+[[string]]
+id = "help.intro.q7_0"
+text = "Why can the network be wrong?"
+
+[[string]]
+id = "help.intro.title"
+text = "What this program does"
+
+[[string]]
+id = "help.intro.try"
+text = "Open the Recognize tab"
+
+[[string]]
+id = "help.kaggle.a11_0"
+text = "Only as far as its license allows, and with care when the photos show people. A network that tells men from women only learns how the people in those photos look; it knows nothing about a person's identity and should not be used to decide anything about people."
+
+[[string]]
+id = "help.kaggle.a11_1"
+text = "No, this program tells one class from exactly one other. For three animals, make a dataset for each pair you care about, or one class against everything else."
+
+[[string]]
+id = "help.kaggle.kicker"
+text = "Data"
+
+[[string]]
+id = "help.kaggle.note9"
+text = "Many Kaggle datasets are laid out in their own way: a train and a test folder that each hold the two classes, labels in a separate CSV file, or all photos in one folder named by breed or by person. This program reads only the two class subfolders, so for such a dataset you first have to sort the photos into two folders yourself, for example by copying the cat photos of train and test into one folder."
+
+[[string]]
+id = "help.kaggle.p1"
+text = "Kaggle (kaggle.com) is a website where people share ready-made datasets for free. Many of them are folders of photos sorted into classes, which is exactly what this program needs, and there are datasets for almost any pair: cats and dogs, ripe and unripe fruit, healthy and sick leaves, men and women, day and night."
+
+[[string]]
+id = "help.kaggle.p3"
+text = "1. Make a free account on kaggle.com and open the Datasets section."
+
+[[string]]
+id = "help.kaggle.p4"
+text = "2. Search for what you need, for example \"cats and dogs\" or \"gender classification\", and prefer datasets that say they hold images in folders."
+
+[[string]]
+id = "help.kaggle.p5"
+text = "3. Read the description and the license: some datasets may not be used for everything."
+
+[[string]]
+id = "help.kaggle.p6"
+text = "4. Press Download and unpack the archive."
+
+[[string]]
+id = "help.kaggle.p7"
+text = "5. Make a folder with exactly two subfolders, one for each class, with the photos inside (deeper folders are fine)."
+
+[[string]]
+id = "help.kaggle.p8"
+text = "6. On the Datasets tab choose that folder in step 1, then add the file it makes in step 2."
+
+[[string]]
+id = "help.kaggle.q11_0"
+text = "Is it fine to train on any dataset?"
+
+[[string]]
+id = "help.kaggle.q11_1"
+text = "Can I teach it three or more classes?"
+
+[[string]]
+id = "help.kaggle.title"
+text = "Where to get photos: Kaggle"
+
+[[string]]
+id = "help.kaggle.try"
+text = "Open the Datasets tab"
+
+[[string]]
+id = "help.loss.a7_0"
+text = "A count jumps by whole steps, and tiny changes of the weights almost never change it, so there is nothing to follow downhill. The logarithmic loss changes smoothly with every weight."
+
+[[string]]
+id = "help.loss.fig2"
+text = "The loss for the right answer: small when sure and right, huge when sure and wrong."
+
+[[string]]
+id = "help.loss.kicker"
+text = "Training"
+
+[[string]]
+id = "help.loss.p1"
+text = "To improve, the network needs a single number that says how bad it is. That number is the loss. For one photo it is the minus logarithm of the probability the network gave to the right animal: if it gave 100 percent to the truth the loss is 0, at 50 percent it is 0.69, and for a confident wrong answer it grows without limit."
+
+[[string]]
+id = "help.loss.p3"
+text = "The loss of a batch is the average over its photos. The two classes are weighed by how rare they are in the training photos, so a dataset with more photos of one class does not teach the network to answer with that class all the time."
+
+[[string]]
+id = "help.loss.q7_0"
+text = "Why not count mistakes instead?"
+
+[[string]]
+id = "help.loss.title"
+text = "Loss: how wrong the network is"
+
+[[string]]
+id = "help.loss.try"
+text = "Open the Train tab"
+
+[[string]]
+id = "help.metrics.a6_0"
+text = "The validation ones, and among them the balanced accuracy together with the validation loss. The training numbers only tell how well the network knows its own photos."
+
+[[string]]
+id = "help.metrics.kicker"
+text = "Looking inside"
+
+[[string]]
+id = "help.metrics.p1"
+text = "Accuracy is the share of validation photos the network got right. If one class has far more photos than the other, a network that always answers with it looks good on that number alone. So the program also shows the accuracy for each class separately and their mean, the balanced accuracy, in which the two classes count the same."
+
+[[string]]
+id = "help.metrics.p2"
+text = "Compare it with 50 percent: that is what a coin toss gives. Anything clearly higher means the network found real differences."
+
+[[string]]
+id = "help.metrics.q6_0"
+text = "Which number should I trust?"
+
+[[string]]
+id = "help.metrics.title"
+text = "Accuracy and balanced accuracy"
+
+[[string]]
+id = "help.metrics.try"
+text = "Open the Train tab"
+
+[[string]]
+id = "help.nav_sub"
+text = "Pick a topic. The order goes from the simplest to the details."
+
+[[string]]
+id = "help.nav_title"
+text = "Help"
+
+[[string]]
+id = "help.pool.a7_0"
+text = "Fewer numbers mean fewer weights in the layers that follow and less memory of things like exact pixel positions that do not matter. ReLU is also what makes the network able to learn more than a straight-line rule."
+
+[[string]]
+id = "help.pool.fig2"
+text = "Max pooling keeps the largest number of each square."
+
+[[string]]
+id = "help.pool.kicker"
+text = "Layers of the network"
+
+[[string]]
+id = "help.pool.p1"
+text = "After each convolution come two simple steps. ReLU keeps positive numbers and turns negative ones into zero: a filter either found its pattern (a positive answer) or it did not (zero). Max pooling then looks at every 2 by 2 square of the map and keeps only the largest number, so the map becomes half as wide and half as tall."
+
+[[string]]
+id = "help.pool.p3"
+text = "Three blocks shrink the picture from 64 by 64 to 32, then 16, then 8. Each step throws away the exact place of a pattern but keeps the fact that it is there, so the network cares less about where an ear is and more about whether there is one."
+
+[[string]]
+id = "help.pool.q7_0"
+text = "Why not just keep all the numbers?"
+
+[[string]]
+id = "help.pool.title"
+text = "ReLU and pooling"
+
+[[string]]
+id = "help.pool.try"
+text = "Open the Filters tab"
+
+[[string]]
+id = "help.section.basics"
+text = "Basics"
+
+[[string]]
+id = "help.section.data"
+text = "Data"
+
+[[string]]
+id = "help.section.inside"
+text = "Looking inside"
+
+[[string]]
+id = "help.section.layers"
+text = "Layers of the network"
+
+[[string]]
+id = "help.section.training"
+text = "Training"
+
+[[string]]
+id = "help.softmax.a6_0"
+text = "Not necessarily. A network can be very confident and wrong, especially on photos unlike its training ones, such as a fox or a drawing. The percentage is how sure it is, not how often it is correct."
+
+[[string]]
+id = "help.softmax.kicker"
+text = "Training"
+
+[[string]]
+id = "help.softmax.p1"
+text = "The two scores can be any numbers, such as 2.1 and -0.4. To read them as chances, they are passed through softmax: each score is raised to the power of e, and the results are divided by their sum. The outputs are between 0 and 1 and add up to 1, so 0.93 means 93 percent."
+
+[[string]]
+id = "help.softmax.p4"
+text = "Only the difference of the two scores matters. The Recognize tab shows these probabilities as two bars."
+
+[[string]]
+id = "help.softmax.q6_0"
+text = "Does 99 percent mean it is right 99 times out of 100?"
+
+[[string]]
+id = "help.softmax.title"
+text = "Scores and probabilities"
+
+[[string]]
+id = "help.softmax.try"
+text = "Open the Recognize tab"
+
+[[string]]
+id = "help.split.a6_0"
+text = "Each new training uses its own random split. A saved network remembers its split, so continuing to train it uses the same one."
+
+[[string]]
+id = "help.split.fig2"
+text = "The training loss keeps falling, the validation loss turns up: the network begins to memorize."
+
+[[string]]
+id = "help.split.kicker"
+text = "Data"
+
+[[string]]
+id = "help.split.note4"
+text = "The split is random and does not look at breeds, so very similar photos of the same animal can land on both sides, which makes the validation numbers a little too hopeful."
+
+[[string]]
+id = "help.split.p1"
+text = "To know whether the network really learned, it has to be tested on photos it has not learned from. So before training the dataset is split at random into 80 percent training photos and 20 percent validation photos, with the same share of each class in both. The network learns from the first part and is only graded on the second."
+
+[[string]]
+id = "help.split.p3"
+text = "When the two numbers drift apart like that, the network is overfitting: it knows its photos by heart and does worse on new ones. More photos, augmentation and fewer epochs all push against it."
+
+[[string]]
+id = "help.split.q6_0"
+text = "Why does the same dataset give a different split?"
+
+[[string]]
+id = "help.split.title"
+text = "Training and validation photos"
+
+[[string]]
+id = "help.split.try"
+text = "Open the Train tab"
+
+[[string]]
+id = "help.votes.a6_0"
+text = "Not quite. It tells how much the filter contributed for this one photo. A filter that is silent here may be decisive for another photo."
+
+[[string]]
+id = "help.votes.kicker"
+text = "Looking inside"
+
+[[string]]
+id = "help.votes.p1"
+text = "For the photo on the Recognize tab, the program asks of every filter: how much did you push the answer toward the second class or toward the first? The vote of a filter is its answer times the gradient of the difference (second score minus first score) with respect to that answer: a filter that is active and whose growth would favor the second class votes for it."
+
+[[string]]
+id = "help.votes.p4"
+text = "Under the cells, two bars show the vote of the picked filter: the bar of the animal it pushes toward grows with the size of its push, next to the strongest push of the layer. Without the biases the votes of a layer add up to exactly the difference of the scores; the biases make up the small rest."
+
+[[string]]
+id = "help.votes.q6_0"
+text = "Is a vote the same as importance?"
+
+[[string]]
+id = "help.votes.title"
+text = "Votes for a class"
+
+[[string]]
+id = "help.votes.try"
+text = "Open the Filters tab"
+
+[[string]]
+id = "name.bad_chars"
+text = "A name may hold only letters, digits, - and _"
+
+[[string]]
+id = "name.empty"
+text = "The name is empty"
+
+[[string]]
+id = "name.too_long"
+text = "The name is longer than {max} characters"
+
+[[string]]
+id = "norm.done"
+text = "Done: {count} pictures, {skipped} skipped"
+
+[[string]]
+id = "norm.failed"
+text = "Stopped"
+
+[[string]]
+id = "norm.idle"
+text = "Not started"
+
+[[string]]
+id = "norm.progress"
+text = "{done} of {total} photos, {skipped} skipped"
+
+[[string]]
+id = "rec.from_file"
+text = "Photo {name}"
+
+[[string]]
+id = "rec.from_sample"
+text = "Sample {n} of {dataset}: actually {class}"
+
+[[string]]
+id = "rec.model"
+text = "{name}: network {network}, epochs: {epochs}, {acc}% balanced accuracy"
+
+[[string]]
+id = "rec.no_model"
+text = "No network loaded"
+
+[[string]]
+id = "rec.no_model_short"
+text = "Load a network"
+
+[[string]]
+id = "rec.no_picture"
+text = "Open a photo or use a sample"
+
+[[string]]
+id = "rec.verdict"
+text = "Looks like: {class} ({percent}%)"
+
+[[string]]
+id = "status.add_failed"
+text = "Cannot add the file: {detail}"
+
+[[string]]
+id = "status.continue_done"
+text = "Done: {from} to {name}, balanced accuracy {before}% to {after}%"
+
+[[string]]
+id = "status.continue_other_classes"
+text = "This network tells {model_first} from {model_second}, the dataset is {first} and {second}: pick a matching one"
+
+[[string]]
+id = "status.continue_other_dataset"
+text = "Training {name} further on {dataset}, which is not the dataset it was trained on: the check numbers may be too good"
+
+[[string]]
+id = "status.continue_started"
+text = "Training {name} further on {dataset}: {train} samples, checking on {val}"
+
+[[string]]
+id = "status.continue_unknown_split"
+text = "Training {name} further. It was saved before its check samples were recorded, so the check numbers may be too good"
+
+[[string]]
+id = "status.dataset_added"
+text = "Added {name}: {count} samples"
+
+[[string]]
+id = "status.dataset_delete_failed"
+text = "Cannot delete {name}"
+
+[[string]]
+id = "status.dataset_deleted"
+text = "Deleted {name}"
+
+[[string]]
+id = "status.dataset_exists"
+text = "A dataset named {name} already exists"
+
+[[string]]
+id = "status.file_missing"
+text = "Choose the normalized file first"
+
+[[string]]
+id = "status.folder_missing"
+text = "Choose the folder with the photos first"
+
+[[string]]
+id = "status.load_failed"
+text = "Cannot load the dataset: {detail}"
+
+[[string]]
+id = "status.model_delete_failed"
+text = "Cannot delete network {name}"
+
+[[string]]
+id = "status.model_deleted"
+text = "Deleted network {name}"
+
+[[string]]
+id = "status.model_load_failed"
+text = "Cannot load the network: {detail}"
+
+[[string]]
+id = "status.model_loaded"
+text = "Loaded network {name}"
+
+[[string]]
+id = "status.model_name_taken"
+text = "A network named {name} exists already"
+
+[[string]]
+id = "status.model_save_failed"
+text = "Cannot save the model: {detail}"
+
+[[string]]
+id = "status.norm_cancelled"
+text = "Normalization cancelled"
+
+[[string]]
+id = "status.norm_failed"
+text = "Cannot normalize: {detail}"
+
+[[string]]
+id = "status.norm_nothing"
+text = "No photo could be read"
+
+[[string]]
+id = "status.norm_saved"
+text = "Saved {count} pictures to {path}"
+
+[[string]]
+id = "status.norm_started"
+text = "Normalizing {count} photos..."
+
+[[string]]
+id = "status.norm_write_failed"
+text = "Cannot save the result: {detail}"
+
+[[string]]
+id = "status.picture_failed"
+text = "Cannot open the photo: {detail}"
+
+[[string]]
+id = "status.ready"
+text = "Ready"
+
+[[string]]
+id = "status.train_done"
+text = "Training done. Best epoch {epoch}: {acc}% balanced accuracy. Saved as {name}"
+
+[[string]]
+id = "status.train_no_data"
+text = "Each class of the dataset needs at least {min} samples"
+
+[[string]]
+id = "status.train_started"
+text = "Training on {name}: {train} samples, checking on {val}"
+
+[[string]]
+id = "status.train_stopped"
+text = "Training stopped"
+
+[[string]]
+id = "train.best"
+text = "Best: epoch {epoch}, check loss {loss}, {acc}% balanced accuracy"
+
+[[string]]
+id = "train.checking"
+text = "Epoch {epoch} of {epochs}: checking, {percent}%"
+
+[[string]]
+id = "train.dataset"
+text = "Dataset: {name} ({count} samples)"
+
+[[string]]
+id = "train.dataset_none"
+text = "No dataset yet: add one on the Datasets tab"
+
+[[string]]
+id = "train.epoch_row"
+text = "{epoch}.  loss {loss}   train {train}%   check {val}%   ({first} {first_acc}%, {second} {second_acc}%)"
+
+[[string]]
+id = "train.idle"
+text = "Not training"
+
+[[string]]
+id = "train.progress"
+text = "Epoch {epoch} of {epochs}, {percent}%"
+
+[[string]]
+id = "train.saved"
+text = "Saved as {name}"
+
+[[string]]
+id = "ui.add.file"
+text = "Normalized file (.cvds)"
+
+[[string]]
+id = "ui.add.name"
+text = "Dataset name (empty: file name)"
+
+[[string]]
+id = "ui.add.title"
+text = "2. Add a normalized dataset"
+
+[[string]]
+id = "ui.btn.add"
+text = "Add"
+
+[[string]]
+id = "ui.btn.cancel"
+text = "Cancel"
+
+[[string]]
+id = "ui.btn.choose_file"
+text = "Choose file..."
+
+[[string]]
+id = "ui.btn.choose_folder"
+text = "Choose folder..."
+
+[[string]]
+id = "ui.btn.choose_output"
+text = "Choose folder..."
+
+[[string]]
+id = "ui.btn.choose_photo"
+text = "Choose photo..."
+
+[[string]]
+id = "ui.btn.continue"
+text = "Continue"
+
+[[string]]
+id = "ui.btn.delete_dataset"
+text = "Delete dataset"
+
+[[string]]
+id = "ui.btn.delete_model"
+text = "Delete"
+
+[[string]]
+id = "ui.btn.load"
+text = "Load"
+
+[[string]]
+id = "ui.btn.normalize"
+text = "Normalize"
+
+[[string]]
+id = "ui.btn.stop"
+text = "Stop"
+
+[[string]]
+id = "ui.btn.train"
+text = "Train new"
+
+[[string]]
+id = "ui.btn.use_sample"
+text = "Use the sample picked on Datasets"
+
+[[string]]
+id = "ui.datasets.title"
+text = "Datasets"
+
+[[string]]
+id = "ui.filters.dream"
+text = "Dream"
+
+[[string]]
+id = "ui.filters.features"
+text = "Answers"
+
+[[string]]
+id = "ui.filters.hint"
+text = "Answers: where a unit fires on the picture (a neuron has one number, shown as brightness). Weights: what it looks for (red adds, blue subtracts; the first layer shows colors, a neuron shows where it looks, an output shows its weights from the hidden neurons). Dream: the picture it answers to hardest. Bars on a cell: orange pushes toward the first class, blue toward the second; green is the strength of the weights."
+
+[[string]]
+id = "ui.filters.title"
+text = "Filters"
+
+[[string]]
+id = "ui.filters.votes"
+text = "How the picked one votes"
+
+[[string]]
+id = "ui.filters.weights"
+text = "Weights"
+
+[[string]]
+id = "ui.norm.hint"
+text = "Pick a folder with two subfolders, one for each class (for example cats and dogs). Every photo is cropped to a square, shrunk to 64x64 and saved into one file; the subfolder names become the names of the classes."
+
+[[string]]
+id = "ui.norm.output"
+text = "Save in"
+
+[[string]]
+id = "ui.norm.source"
+text = "Photos folder"
+
+[[string]]
+id = "ui.norm.title"
+text = "1. Normalize photos"
+
+[[string]]
+id = "ui.rec.file"
+text = "Photo"
+
+[[string]]
+id = "ui.rec.heat"
+text = "Where it looked"
+
+[[string]]
+id = "ui.rec.ideal"
+text = "Ideal pictures"
+
+[[string]]
+id = "ui.rec.ideal_hint"
+text = "Ideal pictures: found by changing a noise picture, step by step, until the network is as sure of the class as it can be; they show what it looks for, not real photos. Heat maps: the red places are where the network found evidence for that class in this photo."
+
+[[string]]
+id = "ui.rec.models"
+text = "Saved networks"
+
+[[string]]
+id = "ui.rec.picture"
+text = "Picture"
+
+[[string]]
+id = "ui.rec.result"
+text = "What the network thinks"
+
+[[string]]
+id = "ui.tab.datasets"
+text = "Datasets"
+
+[[string]]
+id = "ui.tab.filters"
+text = "Filters"
+
+[[string]]
+id = "ui.tab.help"
+text = "Help"
+
+[[string]]
+id = "ui.tab.recognize"
+text = "Recognize"
+
+[[string]]
+id = "ui.tab.train"
+text = "Train"
+
+[[string]]
+id = "ui.train.augment"
+text = "Change pictures at random: flip, shift, tone"
+
+[[string]]
+id = "ui.train.data"
+text = "Data"
+
+[[string]]
+id = "ui.train.epochs"
+text = "Epochs"
+
+[[string]]
+id = "ui.train.lr_decay"
+text = "Lower the learning rate over the run"
+
+[[string]]
+id = "ui.train.model_name"
+text = "Name for the new network (empty: made up)"
+
+[[string]]
+id = "ui.train.models"
+text = "Saved networks: pick one to continue"
+
+[[string]]
+id = "ui.train.network"
+text = "Network"
+
+[[string]]
+id = "ui.train.network_hint"
+text = "Filters in the three conv blocks, then hidden neurons"
+
+[[string]]
+id = "ui.train.results"
+text = "Epochs"
+
+[[string]]
+id = "ui.train.settings"
+text = "Settings"
+
+[[string]]
+id = "ui.train.title"
+text = "Train"
+
+[[string]]
+id = "ui.yourdatasets"
+text = "Your datasets"
+

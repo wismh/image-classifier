@@ -1,0 +1,44 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.gradcam.kicker}"/>
+    <Label class="h-title" text="{tr help.gradcam.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.gradcam.p1}"/>
+    <Stack class="h-figure" direction="vertical">
+        <Component class="h-diagram dg-190" paint="{binding diagram1}"/>
+        <Label class="h-caption" text="{tr help.gradcam.fig2}"/>
+    </Stack>
+    <Label class="h-p" text="{tr help.gradcam.p3}"/>
+    <Label class="h-head" text="{tr help.h.formulas}"/>
+    <Stack class="h-formula" direction="vertical">
+        <Math class="h-math" display="true" formula="\alpha_k = \frac{1}{N} \sum_{i,j} \frac{\partial s}{\partial A^k_{ij}} \qquad \text{map}_{ij} = \max\left(0, \sum_k \alpha_k A^k_{ij}\right)"/>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.legend}"/>
+    <Stack class="h-legend" direction="vertical">
+        <Stack class="h-legend-row" direction="horizontal">
+            <Stack class="h-sym" direction="vertical">
+                <Math class="h-sym-math" formula="A^k"/>
+            </Stack>
+            <Label class="h-legend-text" text="{tr help.gradcam.legend7_0}"/>
+        </Stack>
+        <Stack class="h-legend-row" direction="horizontal">
+            <Stack class="h-sym" direction="vertical">
+                <Math class="h-sym-math" formula="s"/>
+            </Stack>
+            <Label class="h-legend-text" text="{tr help.gradcam.legend7_1}"/>
+        </Stack>
+        <Stack class="h-legend-row" direction="horizontal">
+            <Stack class="h-sym" direction="vertical">
+                <Math class="h-sym-math" formula="\alpha_k"/>
+            </Stack>
+            <Label class="h-legend-text" text="{tr help.gradcam.legend7_2}"/>
+        </Stack>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.gradcam.q9_0}"/>
+            <Label class="h-a" text="{tr help.gradcam.a9_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.gradcam.try}" command="{binding tryIt}"/>
+</Stack>

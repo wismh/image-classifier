@@ -1,0 +1,7 @@
+/build*/
+/.vs/
+/CMakeUserPresets.json
+/data/
+/data.cvds
+/scratch_*.py
+/export/

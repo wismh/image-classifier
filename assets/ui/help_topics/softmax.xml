@@ -1,0 +1,19 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.softmax.kicker}"/>
+    <Label class="h-title" text="{tr help.softmax.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.softmax.p1}"/>
+    <Label class="h-head" text="{tr help.h.formulas}"/>
+    <Stack class="h-formula" direction="vertical">
+        <Math class="h-math" display="true" formula="p_k = \frac{e^{s_k}}{e^{s_0} + e^{s_1}}"/>
+    </Stack>
+    <Label class="h-p" text="{tr help.softmax.p4}"/>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.softmax.q6_0}"/>
+            <Label class="h-a" text="{tr help.softmax.a6_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.softmax.try}" command="{binding tryIt}"/>
+</Stack>

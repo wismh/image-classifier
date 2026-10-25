@@ -1,0 +1,23 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.pool.kicker}"/>
+    <Label class="h-title" text="{tr help.pool.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.pool.p1}"/>
+    <Stack class="h-figure" direction="vertical">
+        <Component class="h-diagram dg-190" paint="{binding diagram1}"/>
+        <Label class="h-caption" text="{tr help.pool.fig2}"/>
+    </Stack>
+    <Label class="h-p" text="{tr help.pool.p3}"/>
+    <Label class="h-head" text="{tr help.h.formulas}"/>
+    <Stack class="h-formula" direction="vertical">
+        <Math class="h-math" display="true" formula="\mathrm{ReLU}(z) = \max(0, z) \qquad \mathrm{pool}(a, b, c, d) = \max(a, b, c, d)"/>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.pool.q7_0}"/>
+            <Label class="h-a" text="{tr help.pool.a7_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.pool.try}" command="{binding tryIt}"/>
+</Stack>

@@ -1,0 +1,3 @@
+name = "cats-vs-dogs"
+engine = "0.2.11a"
+target = "cats-vs-dogs"

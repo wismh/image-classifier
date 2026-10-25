@@ -1,0 +1,22 @@
+<Stack class="h-topic-body" direction="vertical">
+    <Label class="h-kicker" text="{tr help.split.kicker}"/>
+    <Label class="h-title" text="{tr help.split.title}"/>
+    <Label class="h-head" text="{tr help.h.idea}"/>
+    <Label class="h-p" text="{tr help.split.p1}"/>
+    <Stack class="h-figure" direction="vertical">
+        <Component class="h-diagram dg-230" paint="{binding diagram1}"/>
+        <Label class="h-caption" text="{tr help.split.fig2}"/>
+    </Stack>
+    <Label class="h-p" text="{tr help.split.p3}"/>
+    <Stack class="h-note" direction="vertical">
+        <Label class="h-note-text" text="{tr help.split.note4}"/>
+    </Stack>
+    <Label class="h-head" text="{tr help.h.faq}"/>
+    <Stack class="h-faq" direction="vertical">
+        <Stack class="h-qa" direction="vertical">
+            <Label class="h-q" text="{tr help.split.q6_0}"/>
+            <Label class="h-a" text="{tr help.split.a6_0}"/>
+        </Stack>
+    </Stack>
+    <Button class="h-try" content="{tr help.split.try}" command="{binding tryIt}"/>
+</Stack>
